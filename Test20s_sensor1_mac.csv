@@ -1,0 +1,185 @@
+run,type,module,name,attrname,attrvalue,value
+EnergyEfficient-0-20260924-22:02:27-1803,runattr,,,configname,EnergyEfficient,
+EnergyEfficient-0-20260924-22:02:27-1803,runattr,,,datetime,20260924-22:02:27,
+EnergyEfficient-0-20260924-22:02:27-1803,runattr,,,datetimef,20260924-220227,
+EnergyEfficient-0-20260924-22:02:27-1803,runattr,,,experiment,EnergyEfficient,
+EnergyEfficient-0-20260924-22:02:27-1803,runattr,,,inifile,omnetpp.ini,
+EnergyEfficient-0-20260924-22:02:27-1803,runattr,,,iterationvars,,
+EnergyEfficient-0-20260924-22:02:27-1803,runattr,,,iterationvarsd,,
+EnergyEfficient-0-20260924-22:02:27-1803,runattr,,,iterationvarsf,,
+EnergyEfficient-0-20260924-22:02:27-1803,runattr,,,measurement,,
+EnergyEfficient-0-20260924-22:02:27-1803,runattr,,,network,Ieee802154Showcase,
+EnergyEfficient-0-20260924-22:02:27-1803,runattr,,,processid,1803,
+EnergyEfficient-0-20260924-22:02:27-1803,runattr,,,repetition,0,
+EnergyEfficient-0-20260924-22:02:27-1803,runattr,,,replication,#0,
+EnergyEfficient-0-20260924-22:02:27-1803,runattr,,,resultdir,results,
+EnergyEfficient-0-20260924-22:02:27-1803,runattr,,,runnumber,0,
+EnergyEfficient-0-20260924-22:02:27-1803,runattr,,,seedset,0,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,repeat,1,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,sim-time-limit,20s,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,extends,Ieee802154Power,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,sim-time-limit,100s,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,repeat,10,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,**.wlan[*].typename,EnergyEfficientIeee802154Interface,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,**.wlan[*].mac.beaconOrder,6,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,**.wlan[*].mac.superframeOrder,2,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.controller.wlan[*].mac.coordinator,true,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.sensor*.wlan[*].mac.coordinator,false,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.lamp*.wlan[*].mac.coordinator,false,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,extends,Ieee802154,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,sim-time-limit,100s,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,repeat,10,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,**.energyStorage.residualEnergyCapacity.result-recording-modes,+last,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,network,Ieee802154Showcase,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,**.arp.typename,GlobalArp,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,**.netmaskRoutes,"""""",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.radioMedium.backgroundNoise.power,-110dBm,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.configurator.config,"xmldoc(""startopology.xml"")",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.configurator.addStaticRoutes,false,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.sensor*.numApps,1,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.sensor*.app[*].typename,UdpBasicApp,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.sensor*.app[*].destAddresses,"""controller""",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.sensor*.app[*].destPort,1000,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.sensor*.app[*].sendInterval,1s,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.sensor*.app[*].startTime,"uniform(0s,1s)",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.sensor*.app[*].messageLength,10Byte,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.sensor*.app[*].packetName,"""SensorData""",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.controller.numApps,2,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.controller.app[0].typename,UdpBasicApp,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.controller.app[0].destAddresses,"""lamp1 lamp2 lamp3 lamp4 lamp5 lamp6 lamp7 lamp8""",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.controller.app[0].destPort,1000,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.controller.app[0].sendInterval,1s,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.controller.app[0].startTime,exponential(1s),
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.controller.app[0].messageLength,10Byte,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.controller.app[0].packetName,"""ControlData""",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.controller.app[1].typename,UdpSink,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.controller.app[1].localPort,1000,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.lamp*.numApps,1,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.lamp*.app[0].typename,UdpSink,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.lamp*.app[0].localPort,1000,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.routingTableVisualizer[0].displayRoutingTables,false,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.routingTableVisualizer[0].displayRoutesIndividually,false,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.routingTableVisualizer[0].lineShift,0,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.routingTableVisualizer[0].displayLabels,false,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.interfaceTableVisualizer[0].displayInterfaceTables,false,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.numDataLinkVisualizers,2,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.dataLinkVisualizer[*].displayLinks,true,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.dataLinkVisualizer[0].nodeFilter,"""sensor* or controller""",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.dataLinkVisualizer[1].*Color,"""blue""",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.dataLinkVisualizer[1].nodeFilter,"""lamp* or controller""",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.numStatisticVisualizers,2,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.statisticVisualizer[*].zIndex,1,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.statisticVisualizer[0].displayStatistics,true,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.statisticVisualizer[0].signalName,"""packetSent""",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.statisticVisualizer[0].statisticExpression,"""count""",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.statisticVisualizer[0].sourceFilter,"""**.controller.udp OR **.sensor*.udp""",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.statisticVisualizer[0].format,"""sent: %v pks""",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.statisticVisualizer[1].displayStatistics,true,
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.statisticVisualizer[1].signalName,"""packetReceived""",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.statisticVisualizer[1].statisticExpression,"""count""",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.statisticVisualizer[1].sourceFilter,"""**.controller.udp OR **.lamp*.udp""",
+EnergyEfficient-0-20260924-22:02:27-1803,config,,,*.visualizer.statisticVisualizer[1].format,"""rcvd: %v pks""",
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,nbTxFrames,,,24
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,nbRxFrames,,,0
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,nbDroppedFrames,,,0
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,nbMissedAcks,,,5
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,nbRecvdAcks,,,19
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,nbTxAcks,,,0
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,nbDuplicates,,,0
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,meanBackoff,,,0.0026171428571429
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,nbBackoffs,,,56
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,backoffDurations,,,0.14656
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropNotAddressToUs:count,,,190
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropNotAddressToUs:count,interpolationmode,none,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropNotAddressToUs:count,recordingmode,count,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropNotAddressToUs:count,source,packetDropReasonIsNotAddressedToUs(packetDropped),
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropNotAddressToUs:count,title,"packet drop: not addressed to us, count",
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropNotAddressToUs:sum(packetBytes),,,5024
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropNotAddressToUs:sum(packetBytes),interpolationmode,none,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropNotAddressToUs:sum(packetBytes),recordingmode,sum(packetBytes),
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropNotAddressToUs:sum(packetBytes),source,packetDropReasonIsNotAddressedToUs(packetDropped),
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropNotAddressToUs:sum(packetBytes),title,"packet drop: not addressed to us, sum(packetBytes)",
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropIncorrectlyReceived:count,,,5
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropIncorrectlyReceived:count,interpolationmode,none,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropIncorrectlyReceived:count,recordingmode,count,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropIncorrectlyReceived:count,source,packetDropReasonIsIncorrectlyReceived(packetDropped),
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropIncorrectlyReceived:count,title,"packet drop: incorrectly received, count",
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropIncorrectlyReceived:sum(packetBytes),,,193
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropIncorrectlyReceived:sum(packetBytes),interpolationmode,none,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropIncorrectlyReceived:sum(packetBytes),recordingmode,sum(packetBytes),
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropIncorrectlyReceived:sum(packetBytes),source,packetDropReasonIsIncorrectlyReceived(packetDropped),
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropIncorrectlyReceived:sum(packetBytes),title,"packet drop: incorrectly received, sum(packetBytes)",
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropQueueOverflow:count,,,0
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropQueueOverflow:count,interpolationmode,none,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropQueueOverflow:count,recordingmode,count,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropQueueOverflow:count,source,packetDropReasonIsQueueOverflow(packetDropped),
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropQueueOverflow:count,title,"packet drop: queue overflow, count",
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropQueueOverflow:sum(packetBytes),,,0
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropQueueOverflow:sum(packetBytes),interpolationmode,none,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropQueueOverflow:sum(packetBytes),recordingmode,sum(packetBytes),
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropQueueOverflow:sum(packetBytes),source,packetDropReasonIsQueueOverflow(packetDropped),
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropQueueOverflow:sum(packetBytes),title,"packet drop: queue overflow, sum(packetBytes)",
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropRetryLimitReached:count,,,0
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropRetryLimitReached:count,interpolationmode,none,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropRetryLimitReached:count,recordingmode,count,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropRetryLimitReached:count,source,packetDropReasonIsRetryLimitReached(packetDropped),
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropRetryLimitReached:count,title,"packet drop: retry limit reached, count",
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropRetryLimitReached:sum(packetBytes),,,0
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropRetryLimitReached:sum(packetBytes),interpolationmode,none,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropRetryLimitReached:sum(packetBytes),recordingmode,sum(packetBytes),
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropRetryLimitReached:sum(packetBytes),source,packetDropReasonIsRetryLimitReached(packetDropped),
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropRetryLimitReached:sum(packetBytes),title,"packet drop: retry limit reached, sum(packetBytes)",
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropBackoffLimitReached:count,,,0
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropBackoffLimitReached:count,interpolationmode,none,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropBackoffLimitReached:count,recordingmode,count,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropBackoffLimitReached:count,source,packetDropReasonIsCongestion(packetDropped),
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropBackoffLimitReached:count,title,"packet drop: backoff limit reached, count",
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropBackoffLimitReached:sum(packetBytes),,,0
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropBackoffLimitReached:sum(packetBytes),interpolationmode,none,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropBackoffLimitReached:sum(packetBytes),recordingmode,sum(packetBytes),
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropBackoffLimitReached:sum(packetBytes),source,packetDropReasonIsCongestion(packetDropped),
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,packetDropBackoffLimitReached:sum(packetBytes),title,"packet drop: backoff limit reached, sum(packetBytes)",
+EnergyEfficient-0-20260924-22:02:27-1803,scalar,Ieee802154Showcase.sensor1.wlan[0].mac,linkBroken:count,,,0
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,linkBroken:count,interpolationmode,none,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,linkBroken:count,recordingmode,count,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,linkBroken:count,source,linkBroken,
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,linkBroken:count,title,"link break, count",
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,typename,,,"""inet.linklayer.ieee802154.EnergyEfficientIeee802154Mac"""
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,displayStringTextFormat,,,""""""
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,displayStringTextFormat,mutable,,
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,interfaceTableModule,,,"""Ieee802154Showcase.sensor1.interfaceTable"""
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,address,,,"""auto"""
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,address,mutable,,
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,headerLength,,,72b
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,headerLength,unit,b,
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,mtu,,,118B
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,mtu,unit,B,
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,bitrate,,,250000bps
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,bitrate,unit,bps,
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,ccaDetectionTime,,,0.000128s
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,ccaDetectionTime,unit,s,
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,rxSetupTime,,,0s
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,rxSetupTime,unit,s,
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,aTurnaroundTime,,,0.000192s
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,aTurnaroundTime,unit,s,
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,useMACAcks,,,true
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,macMaxFrameRetries,,,3
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,macAckWaitDuration,,,0.00056s
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,macAckWaitDuration,unit,s,
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,ackLength,,,40b
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,ackLength,unit,b,
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,sifs,,,0.000192s
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,sifs,unit,s,
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,backoffMethod,,,"""exponential"""
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,macMaxCSMABackoffs,,,4
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,aUnitBackoffPeriod,,,0.00032s
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,aUnitBackoffPeriod,unit,s,
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,contentionWindow,,,2
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,macMinBE,,,3
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,macMaxBE,,,5
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,radioModule,,,"""^.radio"""
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,beaconOrder,,,6
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,superframeOrder,,,2
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,beaconGuardTime,,,0.001s
+EnergyEfficient-0-20260924-22:02:27-1803,attr,Ieee802154Showcase.sensor1.wlan[0].mac,beaconGuardTime,unit,s,
+EnergyEfficient-0-20260924-22:02:27-1803,param,Ieee802154Showcase.sensor1.wlan[0].mac,coordinator,,,false

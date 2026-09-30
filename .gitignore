@@ -1,0 +1,7 @@
+.qtenvrc
+*.bak
+*.tmp
+*.log
+*.vec
+*.vci
+results/
